@@ -3,10 +3,10 @@ import React from 'react'
 import { Link , NavLink } from 'react-router-dom'
 const Header = () => {
   return (
-    <div className='flex justify-between items-center bg-[#2c2c2c] text-white '>
+    <div className='flex justify-between items-center bg-[#2c2c2c] text-white p-[10px]'>
       
       <div className='flex gap-[10px] font-bold text-xl p-[10px]  ' >
-        <Link >Logo</Link>
+        <Link>Logo</Link>
       </div>
       <div className='flex gap-[40px] font-bold text-xl p-[15px]  '>
         <Link>Home</Link>
