@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion'; // Animation ke liye
 
-function AddItem() {
+function AddProduct() {
   const [HandleInput, setHandleInput] = useState('');
   const [HandleTextArea, setHandleTextArea] = useState('');
   const [Location, setLocation] = useState('');
@@ -106,4 +106,6 @@ function AddItem() {
   );
 }
 
-export default AddItem;
+export default AddProduct;
+
+

@@ -5,7 +5,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div className="h-screen w-screen bg-gradient-to-br from-[#FF5733] to-[#C70039] flex flex-col text-white">
-      <Header />
+
 
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center h-[80vh] text-center p-8">
@@ -41,7 +41,6 @@ const Home = () => {
           </p>
         </div>
       </div>
-<Footer/>
 
     
     </div>
