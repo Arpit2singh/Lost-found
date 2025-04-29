@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ItemContext } from '../context/ItemContext';
+import { Link } from 'react-router-dom';
 
 function LostItemList() {
 
@@ -24,6 +25,8 @@ function LostItemList() {
                 <section className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                   
                     {lostItems.map((item) => (
+                        <Link to={`/ItemDetail/${item.id}`}>
+
                         <div
                             key={item.id} // Always use key when mapping over arrays in React
                             className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300"
@@ -44,6 +47,7 @@ function LostItemList() {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     ))}
                 </section>
 

@@ -13,6 +13,8 @@ function AddProduct() {
     console.log("Form submitted:", { HandleInput, HandleTextArea, Location, LostDate, Image });
   };
 
+  
+
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-4">
       

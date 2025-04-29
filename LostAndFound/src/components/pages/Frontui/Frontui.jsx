@@ -7,6 +7,7 @@ import ContactUs from "../ContactUS/Contactus";
 import LostItemList from "../LostItemList";
 
 import AddProduct from "../../AddProduct";
+import ItemDetail from "../Elements/ItemDetail/ItemDetail";
 
 
 const Frontui = () => {
@@ -36,6 +37,10 @@ const Frontui = () => {
                 {
                     path: "/AddProduct",
                     element: <AddProduct />
+                },
+                {
+                    path: "/ItemDetail/:id",
+                    element: <ItemDetail/>
                 }
 
             ]
