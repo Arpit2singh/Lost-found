@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion'; // Animation ke liye
+import { useContext } from 'react';
+import { ItemContext } from './context/ItemContext';
 
 function AddProduct() {
   const [HandleInput, setHandleInput] = useState('');
@@ -8,18 +10,47 @@ function AddProduct() {
   const [LostDate, setLostDate] = useState('');
   const [Image, setImage] = useState(null);
 
+  const { lostItems, Addpro, setAddpro } = useContext(ItemContext)
+
+
+
+
+
+
+
   const HandleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { HandleInput, HandleTextArea, Location, LostDate, Image });
+    console.log("Form submitted");
+
+    const newItem = {
+      id: Date.now().toString(),
+      itemName: HandleInput,
+      description: HandleTextArea,
+      location: Location,
+      lostDate: LostDate,
+      image: Image,
+    };
+    console.log(newItem)
+    setAddpro([...Addpro, newItem]);
+    console.log("Updated Addpro array: ", [...Addpro, newItem]);
+
+
+    setHandleInput('');
+    setHandleTextArea('');
+    setLocation('');
+    setLostDate('');
+    setImage(null);
+
+
   };
 
-  
+
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-4">
-      
+
       {/* Hero Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

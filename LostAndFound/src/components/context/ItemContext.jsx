@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext , createContext }  from 'react';
-
-    const lostItems = [
+import { useState } from 'react';
+    let lostItems = [
         {
           id: 1,
           itemName: "Wallet",
@@ -44,9 +44,11 @@ import { useContext , createContext }  from 'react';
         }
       ];
 
+ 
       const ItemContext = createContext() ;
       const ItemContextProvider = (props) =>{
-         return <ItemContext.Provider value={{lostItems}}>{props.children}</ItemContext.Provider>
+        const [Addpro, setAddpro] = useState(lostItems)
+         return <ItemContext.Provider value={{lostItems , Addpro , setAddpro }}>{props.children}</ItemContext.Provider>
       }
       
   

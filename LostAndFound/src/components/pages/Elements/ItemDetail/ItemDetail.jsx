@@ -6,10 +6,10 @@ import { ItemContext } from '../../../context/ItemContext';
 function ItemDetail() {
 
   const params = useParams();
-  const { lostItems } = useContext(ItemContext);
-  console.log(lostItems);
+  const { lostItems ,Addpro } = useContext(ItemContext);
+  console.log(Addpro);
   console.log(params.id) ;
-  const itemfound = lostItems.find(item => item.id.toString() === params.id);
+  const itemfound = Addpro.find(item => item.id.toString() === params.id);
 
   if (!itemfound) {
     return <div className="text-white text-center">Item not found.</div>;

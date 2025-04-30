@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function LostItemList() {
 
     // Get lostItems from the context
-    const { lostItems } = useContext(ItemContext);
+    const { lostItems ,Addpro } = useContext(ItemContext);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 p-6">
@@ -24,7 +24,7 @@ function LostItemList() {
                 {/* CARD GRID */}
                 <section className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                   
-                    {lostItems.map((item) => (
+                    {Addpro.map((item) => (
                         <Link to={`/ItemDetail/${item.id}`}>
 
                         <div
