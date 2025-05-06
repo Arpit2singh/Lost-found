@@ -5,10 +5,10 @@ import Layout from "../../Layout/Layout";
 import Home from "../Home";
 import ContactUs from "../ContactUS/Contactus";
 import LostItemList from "../LostItemList";
-
+import { useState } from "react";
 import AddProduct from "../../AddProduct";
 import ItemDetail from "../Elements/ItemDetail/ItemDetail";
-
+import MyAi from "../MyAi/MyAi";
 
 const Frontui = () => {
 
@@ -16,6 +16,14 @@ const Frontui = () => {
     // Add Item
     // Found Item
     // Contact Us
+ const [showbot, setshowbot] = useState(false)
+
+   const handleMousehover = () =>{
+    setshowbot(false) ;
+   }
+   const handleMouseEnter = () =>{
+    setshowbot(true) ;
+   }
 
     const router = createBrowserRouter([
         {
@@ -41,6 +49,11 @@ const Frontui = () => {
                 {
                     path: "/ItemDetail/:id",
                     element: <ItemDetail/>
+                },
+                {
+                    path: "/MyAi",
+                    element: showbot ?  <MyAi/> : null 
+                    
                 }
 
             ]
@@ -48,7 +61,8 @@ const Frontui = () => {
     ]);
 
     return (
-        <div className="h-[100vh] w-[100vw] bg-gradient-to-br from-gray-900 via-black to-gray-800 ">
+        <div className="h-[100vh] w-[100vw] bg-gradient-to-br from-gray-900 via-black to-gray-800 " 
+        onMouseEnter={handleMouseEnter} onMouseLeave={handleMousehover} >
             <RouterProvider router={router} />
 
         </div>

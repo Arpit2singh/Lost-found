@@ -16,7 +16,7 @@ const Home = () => {
           Reconnect with your lost items effortlessly. Search, report, and get notifications.
         </p>
         <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-3 rounded-full text-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
-          Start Searching
+          Login
         </button>
       </div>
 
